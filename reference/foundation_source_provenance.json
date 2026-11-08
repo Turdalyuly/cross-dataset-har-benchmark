@@ -1,0 +1,13 @@
+{
+  "source": "Local IPython history recovered and verified from the user project",
+  "original_stage5l2": "session 196 line 16 (corrected import); fold 0 for TimesNet/PatchTST/TSLANet",
+  "original_stage5l3": "session 196 line 17; folds 1-4; fold 0 copied from Stage5L2",
+  "source_sha256": {
+    "private_history/session_196_line_16.py": "26ef382927ba2415a2b9d3a9daf7a9f62bd93e3c4ca995625d4913cc0412b499",
+    "private_history/session_196_line_17.py": "04a04d6afdbd4dbcc7b0c4853dfeabc3c6763071b17d90f4052fcc99d170b1f7"
+  },
+  "model_builders_source": "models/foundation_baselines.py",
+  "training_runner": "experiments/new_models_clean.py",
+  "report": "tools/audit_original_foundation.py",
+  "scope": "Model factory and read-only audit reconstructed; exact upstream external source commits not yet certified; original run checkpoint audit pending"
+}

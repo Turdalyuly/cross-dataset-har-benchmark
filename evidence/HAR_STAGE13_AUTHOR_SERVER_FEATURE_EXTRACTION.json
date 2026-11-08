@@ -1,0 +1,110 @@
+{
+  "schema": "HAR-public-author-side-feature-extraction-evidence-v1",
+  "release_evidence_status": "AUTHOR_SERVER_FEATURE_EXTRACTION_REPLAY_PASS_THREE_MODELS",
+  "scope": "Author-server X.npy -> original saved-checkpoint encoder -> retained feature arrays; not retraining or clean-machine reproduction",
+  "original_project_files_modified": false,
+  "datasets": [
+    "wisdm",
+    "uci_har",
+    "mhealth",
+    "pamap2",
+    "motionsense"
+  ],
+  "moment_1": {
+    "status": "EXACT_EMBEDDING_MATCH_ALL_FIVE",
+    "dataset_count": 5,
+    "rows_compared": 96776,
+    "feature_dim": 768,
+    "values_compared": 74323968,
+    "max_absolute_difference": 0.0,
+    "historical_source_cell_sha256": "3a7e321b248a7d0a2d3ba3473bf5c33a24009ff6dcf94006c7c34b17bfdcfe46",
+    "full_private_report_sha256": "e8748f8ab97e9bd495667ce426b79df9ac6e6f82915a5e6194e0d6ea14c22e58"
+  },
+  "mantis_v2": {
+    "status": "EXACT_EMBEDDING_MATCH_ALL_FIVE",
+    "dataset_count": 5,
+    "rows_compared": 96776,
+    "feature_dim": 1536,
+    "values_compared": 148647936,
+    "max_absolute_difference": 0.0,
+    "historical_source_cell_sha256": "f1c4ce0d3646857165a17d2ea43417643f7e2f4b4c02b15ceecf931a1f738a76",
+    "full_private_report_sha256": "8d75bca8d36cdf12d33ec4d82575607460b47c7ff3a0d1797a0a50fdde3cdf6e"
+  },
+  "crosshar_encoder": {
+    "status": "EXACT_Z_TEST_MATCH_ALL_25_FOLDS",
+    "folds_pass": 25,
+    "dataset_count": 5,
+    "test_rows_compared": 96776,
+    "features_per_test_window": 8640,
+    "values_compared": 836144640,
+    "max_absolute_difference": 0.0,
+    "exact_equal": true,
+    "historical_encoder": {
+      "feature_num": 3,
+      "hidden": 72,
+      "hidden_ff": 144,
+      "n_layers": 1,
+      "n_heads": 4,
+      "seq_len": 120,
+      "emb_norm": true
+    },
+    "historical_inference": {
+      "batch_size": 512,
+      "output_embed": true,
+      "shuffle": false,
+      "normalization": "float32 train-only per fold",
+      "autocast": false
+    },
+    "per_dataset": {
+      "wisdm": {
+        "folds": 5,
+        "rows": 52747,
+        "values": 455734080,
+        "exact": true,
+        "max_absolute_difference": 0.0
+      },
+      "uci_har": {
+        "folds": 5,
+        "rows": 9073,
+        "values": 78390720,
+        "exact": true,
+        "max_absolute_difference": 0.0
+      },
+      "mhealth": {
+        "folds": 5,
+        "rows": 2300,
+        "values": 19872000,
+        "exact": true,
+        "max_absolute_difference": 0.0
+      },
+      "pamap2": {
+        "folds": 5,
+        "rows": 8164,
+        "values": 70536960,
+        "exact": true,
+        "max_absolute_difference": 0.0
+      },
+      "motionsense": {
+        "folds": 5,
+        "rows": 24492,
+        "values": 211610880,
+        "exact": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "full_private_replay_report_sha256": "3117181cbd1908e7a80ad06a7fe07757c20759a8cde0d1f365da8b500c6ad673",
+    "full_private_preflight_sha256": "605a63cf9551a98cb96eae4131bc3a0f8e494ed6896df90ef3dbe939e2373a2f",
+    "source_sha256_checked": true,
+    "training_performed": false
+  },
+  "limitations": [
+    "Checks use retained author-side raw-to-processed X.npy, saved checkpoints, and original reference arrays; no independent clean-machine evaluation is asserted.",
+    "No retraining of the ten benchmark models or reconstruction of the complete 250-run training pipeline is claimed.",
+    "CrossHAR checked encoder -> saved Z_test; original SSL training and new classifier training were not repeated.",
+    "MantisV2/MOMENT-1 checks covered original frozen embeddings, not training of foundation encoders.",
+    "Robustness, compute-efficiency and transfer-training studies have not been independently repeated.",
+    "All third-party model/code redistribution requires separate license/terms verification.",
+    "No raw sensor datasets, original model weights, historical private code or full author-side reports are bundled."
+  ],
+  "updated_utc": "2026-11-08"
+}

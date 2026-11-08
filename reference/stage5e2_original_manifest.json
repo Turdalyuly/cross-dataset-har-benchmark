@@ -1,0 +1,276 @@
+{
+  "stage": "5E.2",
+  "created_at": "2026-10-05T22:14:36.732064",
+  "representation": "harmonized_hart_v1",
+  "methodology": {
+    "source": "original/raw signals",
+    "sampling_rate_hz": 30.0,
+    "resampling": "scipy.signal.resample_poly",
+    "window_samples": 120,
+    "window_seconds": 4.0,
+    "hop_samples": 30,
+    "hop_seconds": 1.0,
+    "overlap": 0.75,
+    "channels": "3-axis accelerometer",
+    "unit": "g",
+    "classes": [
+      "walking",
+      "sitting",
+      "standing",
+      "stairs"
+    ],
+    "label_policy": "windows generated within constant original activity runs",
+    "splits": "same subject assignments as harmonized_v1",
+    "motionsense_source": "A_DeviceMotion_data",
+    "motionsense_acceleration": "gravity + userAcceleration"
+  },
+  "datasets": {
+    "wisdm": {
+      "dataset": "wisdm",
+      "representation": "harmonized_hart_v1",
+      "created_at": "2026-10-05T22:07:51.428719",
+      "shape": [
+        52747,
+        120,
+        3
+      ],
+      "subjects": 51,
+      "classes": [
+        "sitting",
+        "stairs",
+        "standing",
+        "walking"
+      ],
+      "class_counts": {
+        "walking": 13805,
+        "sitting": 13045,
+        "standing": 13296,
+        "stairs": 12601
+      },
+      "sampling_rate_hz": 30.0,
+      "window_length": 120,
+      "window_seconds": 4.0,
+      "hop_length": 30,
+      "hop_seconds": 1.0,
+      "overlap": 0.75,
+      "channels": [
+        "acc_x",
+        "acc_y",
+        "acc_z"
+      ],
+      "unit": "g",
+      "window_label_policy": "constant original-label runs only",
+      "parser_audit": {
+        "files": 51
+      },
+      "subject_alignment": {
+        "type": "identity",
+        "mapping": {}
+      },
+      "sha256": {
+        "X.npy": "2a46d5929b91b1e92295be12a158e26811d79f77e7edddd80d658940f6e11fd9",
+        "metadata.csv": "067d4429fb2b94ae4d415259c711c6d65fb1395070b6e9198fe9a3683b7daabd"
+      }
+    },
+    "uci_har": {
+      "dataset": "uci_har",
+      "representation": "harmonized_hart_v1",
+      "created_at": "2026-10-05T22:07:52.759643",
+      "shape": [
+        9073,
+        120,
+        3
+      ],
+      "subjects": 30,
+      "classes": [
+        "sitting",
+        "stairs",
+        "standing",
+        "walking"
+      ],
+      "class_counts": {
+        "walking": 1919,
+        "sitting": 2009,
+        "standing": 2198,
+        "stairs": 2947
+      },
+      "sampling_rate_hz": 30.0,
+      "window_length": 120,
+      "window_seconds": 4.0,
+      "hop_length": 30,
+      "hop_seconds": 1.0,
+      "overlap": 0.75,
+      "channels": [
+        "acc_x",
+        "acc_y",
+        "acc_z"
+      ],
+      "unit": "g",
+      "window_label_policy": "constant original-label runs only",
+      "parser_audit": {
+        "root": "datasets/raw/uci_har/extracted/UCI HAR Dataset/UCI HAR Dataset",
+        "pairs_checked": 8016,
+        "pairs_joined": 7628,
+        "reconstructed_sessions": 727,
+        "overlap_mae_median": 0.0,
+        "overlap_mae_p95": 0.0,
+        "overlap_mae_max": 0.5209499597549438
+      },
+      "subject_alignment": {
+        "type": "identity",
+        "mapping": {}
+      },
+      "sha256": {
+        "X.npy": "39ca034429394c2a3b5d695777c21680390a1e78bc28e0be0a9315872798b98b",
+        "metadata.csv": "b1e4688e38442ca9d5312f9f3d3a67030444a7a651219850ca4d6c38444577b3"
+      }
+    },
+    "mhealth": {
+      "dataset": "mhealth",
+      "representation": "harmonized_hart_v1",
+      "created_at": "2026-10-05T22:08:16.582466",
+      "shape": [
+        2300,
+        120,
+        3
+      ],
+      "subjects": 10,
+      "classes": [
+        "sitting",
+        "stairs",
+        "standing",
+        "walking"
+      ],
+      "class_counts": {
+        "walking": 580,
+        "sitting": 580,
+        "standing": 580,
+        "stairs": 560
+      },
+      "sampling_rate_hz": 30.0,
+      "window_length": 120,
+      "window_seconds": 4.0,
+      "hop_length": 30,
+      "hop_seconds": 1.0,
+      "overlap": 0.75,
+      "channels": [
+        "acc_x",
+        "acc_y",
+        "acc_z"
+      ],
+      "unit": "g",
+      "window_label_policy": "constant original-label runs only",
+      "parser_audit": {
+        "files": 10
+      },
+      "subject_alignment": {
+        "type": "identity",
+        "mapping": {}
+      },
+      "sha256": {
+        "X.npy": "ebd66b5898702a58a8d1202b022b5e449408e8e427e1b82bd5c6e15af119d584",
+        "metadata.csv": "1624e18d4a0d3cda242de2e96c2919aa36e32ea6082371922d343c3ae4f82040"
+      }
+    },
+    "pamap2": {
+      "dataset": "pamap2",
+      "representation": "harmonized_hart_v1",
+      "created_at": "2026-10-05T22:10:23.320479",
+      "shape": [
+        8164,
+        120,
+        3
+      ],
+      "subjects": 8,
+      "classes": [
+        "sitting",
+        "stairs",
+        "standing",
+        "walking"
+      ],
+      "class_counts": {
+        "walking": 2361,
+        "sitting": 1823,
+        "standing": 1872,
+        "stairs": 2108
+      },
+      "sampling_rate_hz": 30.0,
+      "window_length": 120,
+      "window_seconds": 4.0,
+      "hop_length": 30,
+      "hop_seconds": 1.0,
+      "overlap": 0.75,
+      "channels": [
+        "acc_x",
+        "acc_y",
+        "acc_z"
+      ],
+      "unit": "g",
+      "window_label_policy": "constant original-label runs only",
+      "parser_audit": {
+        "files": 9
+      },
+      "subject_alignment": {
+        "type": "identity",
+        "mapping": {}
+      },
+      "sha256": {
+        "X.npy": "971625db3fed149eeb599bca408af2890ac10f0504fdffb2815cd3f4f7e33d6d",
+        "metadata.csv": "5614f35b5d272ba7948099ca163aab4326acb1cb2b3cae9baf9591054956b162"
+      }
+    },
+    "motionsense": {
+      "dataset": "motionsense",
+      "representation": "harmonized_hart_v1",
+      "created_at": "2026-10-05T22:14:36.353982",
+      "shape": [
+        24492,
+        120,
+        3
+      ],
+      "subjects": 24,
+      "classes": [
+        "sitting",
+        "stairs",
+        "standing",
+        "walking"
+      ],
+      "class_counts": {
+        "walking": 6634,
+        "sitting": 6610,
+        "standing": 5964,
+        "stairs": 5284
+      },
+      "sampling_rate_hz": 30.0,
+      "window_length": 120,
+      "window_seconds": 4.0,
+      "hop_length": 30,
+      "hop_seconds": 1.0,
+      "overlap": 0.75,
+      "channels": [
+        "acc_x",
+        "acc_y",
+        "acc_z"
+      ],
+      "unit": "g",
+      "window_label_policy": "constant original-label runs only",
+      "parser_audit": {
+        "all_csv_files": 1080,
+        "selected_device_motion_files": 312,
+        "bad_files": 0,
+        "input_source": "A_DeviceMotion_data",
+        "acceleration_definition": "gravity + userAcceleration",
+        "source_fs_hz": 50
+      },
+      "subject_alignment": {
+        "type": "identity",
+        "mapping": {}
+      },
+      "sha256": {
+        "X.npy": "52ff8ef41af0839f2fa0d38a0c25c02a2f93b6c0adef2e53a54b07408694e1b0",
+        "metadata.csv": "3406c303cc2e9bb7571846d38433b0c973d7d19b261a851d75c8dd51401824d8"
+      }
+    }
+  },
+  "validation": "PASS"
+}

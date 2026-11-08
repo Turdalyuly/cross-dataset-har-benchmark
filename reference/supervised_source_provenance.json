@@ -1,0 +1,5 @@
+{
+  "source_name": "stage5g3_supervised_clean_s194_l22.py",
+  "source_sha256": "3d1d06212a90276f079b929b6c900871bb540bfe66ac7f6fc5632eebb8a20d10",
+  "note": "Model classes copied unchanged; runner reconstructed separately. Original fold0 Stage 5F.1 was copied, not retrained by Stage 5G.3."
+}

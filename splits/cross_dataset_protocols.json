@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-10-05T20:07:57.658157",
+  "classes": {
+    "walking": 0,
+    "sitting": 1,
+    "standing": 2,
+    "stairs": 3
+  },
+  "leave_one_dataset_out": [
+    {
+      "held_out_dataset": "wisdm",
+      "train_datasets": [
+        "uci_har",
+        "mhealth",
+        "pamap2",
+        "motionsense"
+      ]
+    },
+    {
+      "held_out_dataset": "uci_har",
+      "train_datasets": [
+        "wisdm",
+        "mhealth",
+        "pamap2",
+        "motionsense"
+      ]
+    },
+    {
+      "held_out_dataset": "mhealth",
+      "train_datasets": [
+        "wisdm",
+        "uci_har",
+        "pamap2",
+        "motionsense"
+      ]
+    },
+    {
+      "held_out_dataset": "pamap2",
+      "train_datasets": [
+        "wisdm",
+        "uci_har",
+        "mhealth",
+        "motionsense"
+      ]
+    },
+    {
+      "held_out_dataset": "motionsense",
+      "train_datasets": [
+        "wisdm",
+        "uci_har",
+        "mhealth",
+        "pamap2"
+      ]
+    }
+  ],
+  "pairwise_transfer": [
+    {
+      "train_dataset": "wisdm",
+      "test_dataset": "uci_har"
+    },
+    {
+      "train_dataset": "wisdm",
+      "test_dataset": "mhealth"
+    },
+    {
+      "train_dataset": "wisdm",
+      "test_dataset": "pamap2"
+    },
+    {
+      "train_dataset": "wisdm",
+      "test_dataset": "motionsense"
+    },
+    {
+      "train_dataset": "uci_har",
+      "test_dataset": "wisdm"
+    },
+    {
+      "train_dataset": "uci_har",
+      "test_dataset": "mhealth"
+    },
+    {
+      "train_dataset": "uci_har",
+      "test_dataset": "pamap2"
+    },
+    {
+      "train_dataset": "uci_har",
+      "test_dataset": "motionsense"
+    },
+    {
+      "train_dataset": "mhealth",
+      "test_dataset": "wisdm"
+    },
+    {
+      "train_dataset": "mhealth",
+      "test_dataset": "uci_har"
+    },
+    {
+      "train_dataset": "mhealth",
+      "test_dataset": "pamap2"
+    },
+    {
+      "train_dataset": "mhealth",
+      "test_dataset": "motionsense"
+    },
+    {
+      "train_dataset": "pamap2",
+      "test_dataset": "wisdm"
+    },
+    {
+      "train_dataset": "pamap2",
+      "test_dataset": "uci_har"
+    },
+    {
+      "train_dataset": "pamap2",
+      "test_dataset": "mhealth"
+    },
+    {
+      "train_dataset": "pamap2",
+      "test_dataset": "motionsense"
+    },
+    {
+      "train_dataset": "motionsense",
+      "test_dataset": "wisdm"
+    },
+    {
+      "train_dataset": "motionsense",
+      "test_dataset": "uci_har"
+    },
+    {
+      "train_dataset": "motionsense",
+      "test_dataset": "mhealth"
+    },
+    {
+      "train_dataset": "motionsense",
+      "test_dataset": "pamap2"
+    }
+  ]
+}

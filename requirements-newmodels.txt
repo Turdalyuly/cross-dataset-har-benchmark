@@ -1,0 +1,5 @@
+# Use your vetted PyTorch/CUDA environment; this file does not install the upstream model repositories.
+numpy
+pandas
+scikit-learn
+torch

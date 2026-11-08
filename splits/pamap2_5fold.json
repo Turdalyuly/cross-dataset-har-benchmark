@@ -1,0 +1,92 @@
+{
+  "dataset": "pamap2",
+  "seed": 2026,
+  "strategy": "subject-disjoint 5-fold rotating train/validation/test",
+  "folds": [
+    {
+      "fold": 0,
+      "train_subjects": [
+        101,
+        102,
+        103,
+        107
+      ],
+      "val_subjects": [
+        104,
+        108
+      ],
+      "test_subjects": [
+        105,
+        106
+      ]
+    },
+    {
+      "fold": 1,
+      "train_subjects": [
+        102,
+        105,
+        106,
+        107
+      ],
+      "val_subjects": [
+        101,
+        103
+      ],
+      "test_subjects": [
+        104,
+        108
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        102,
+        104,
+        105,
+        106,
+        108
+      ],
+      "val_subjects": [
+        107
+      ],
+      "test_subjects": [
+        101,
+        103
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        101,
+        103,
+        104,
+        105,
+        106,
+        108
+      ],
+      "val_subjects": [
+        102
+      ],
+      "test_subjects": [
+        107
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        101,
+        103,
+        104,
+        107,
+        108
+      ],
+      "val_subjects": [
+        105,
+        106
+      ],
+      "test_subjects": [
+        102
+      ]
+    }
+  ]
+}

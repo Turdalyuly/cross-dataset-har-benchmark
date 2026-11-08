@@ -1,0 +1,76 @@
+{
+  "schema": "HAR-reproducibility-evidence-v1",
+  "result": "PASS",
+  "evidence": {
+    "preprocessing": {
+      "datasets_pass": 5,
+      "sha256_files_match": 10,
+      "total_windows": 96776,
+      "scope": "author-server raw-data replay; identical X.npy and metadata.csv outputs"
+    },
+    "supervised_3_models": {
+      "runs": 75,
+      "metrics_match": 75,
+      "predictions_rescored": 75,
+      "sample_checkpoints_compatible": 3
+    },
+    "timesnet_patchtst_tslanet": {
+      "runs": 75,
+      "metrics_match": 75,
+      "predictions_rescored": 75,
+      "sample_checkpoints_compatible": 3
+    },
+    "other_4_models": {
+      "runs": 100,
+      "metrics_match": 100,
+      "predictions_rescored": 100,
+      "artifact_files_present": 8
+    },
+    "pretrained_artifacts": {
+      "files_verified": 8,
+      "trusted_sklearn_heads": 2,
+      "scope": "saved file integrity and fitted-object structure, not encoder replay"
+    },
+    "frozen_heads": {
+      "folds_pass": 50,
+      "label_mismatches": 0,
+      "max_probability_difference": 1.1102230246251565e-16,
+      "scope": "saved embeddings -> StandardScaler + LogisticRegression -> test predictions; no encoder rerun"
+    },
+    "crosshar": {
+      "folds_pass": 25,
+      "label_mismatches": 0,
+      "max_probability_difference": 2.980194091506405e-08,
+      "total_test_predictions_checked": 96776,
+      "full_csv_length_checked": true,
+      "scope": "strict CrossHAR 3-checkpoint loading; classifier inference from retained Z_test representations"
+    },
+    "hart": {
+      "folds_pass": 25,
+      "label_mismatches": 0,
+      "max_probability_difference": 2.980194091506405e-08,
+      "total_test_predictions_checked": 96776,
+      "full_csv_length_checked": true,
+      "scope": "full HART inference from X.npy using trained weights and author-server dependency"
+    }
+  },
+  "source_report_sha256": {
+    "preprocessing": "d1e797a7ec7da5264939f16cbde4ed87d05ac87bdcbcd199115cf9d6721d72f8",
+    "supervised": "50d04dc3e5198df17c7d08c41ca5cf1cba869472c31b5e0ebcaf1d2a27bff9e2",
+    "newmodels": "e002bbfa70b8de39d32990c82e690ef846b69e02033c14176dff4bdbf1188a19",
+    "remaining": "1c68e4be1224f0160c7482c5a0d8a2b7462284993cc09ee5162fd4fe4c03fff8",
+    "artifacts": "50557897e200cf0b80ea16168a1ca494b7d1943afe920a722dbe3bcca55f3788",
+    "artifacts_trusted": "f9ffe540822a3967eb52715fea82188df5647fd5d58ab9e3c75d75b1b982d5bc",
+    "frozen_heads": "009ce377d5573afb0def008caa21929a625dec481dfbd0b882e1768b577cce26",
+    "crosshar": "7d3700875f35a2dab263de9230b0b464272d3be215026360a30e8036e5b89d61",
+    "hart": "1d1236349c09e37d1a43fd80587de62b1a08095ceca998248900879250bf8595"
+  },
+  "boundaries": [
+    "Results match saved test predictions, not a new training of all ten models.",
+    "Freshly generated MantisV2/MOMENT-1 encoder embeddings have not been verified.",
+    "CrossHAR replay uses saved Z_test features; encoder-feature extraction has not been independently rerun.",
+    "HART replay requires original environment, trained checkpoints, BF16 GPU and exact batch_size=1024.",
+    "Preprocessing exact hashes demonstrated only against retained original author-side raw-data sources.",
+    "No independent clean-machine reproduction of training, robustness, or efficiency experiments is claimed."
+  ]
+}
